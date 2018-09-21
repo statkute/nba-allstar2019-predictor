@@ -212,7 +212,7 @@ def predict_season (filename, delim):
 
     sorted_predictions = sorted(results.items(), key=lambda kv: kv[1], reverse=True)
 
-    predicted_selections = sorted_predictions[:20]
+    predicted_selections = sorted_predictions[:35]
     # print (predicted_selections[0][0])
 
     for player in predicted_selections:
@@ -229,45 +229,59 @@ if __name__ == "__main__":
     print ("Random starting synaptic weights: ")
     print (neural_network.synaptic_weights)
 
-    training_set_inputs = readInputCsv("training_data/2016-2017.csv", ";")
-    training_set_outputs = array(readOutputCsv("training_data/2016-2017.csv", ";")).T
-    neural_network.train(training_set_inputs, training_set_outputs, 10000)
 
-    training_set_inputs1 = readInputCsv("training_data/2015-2016.csv", ";")
-    training_set_outputs1 = array(readOutputCsv("training_data/2015-2016.csv", ";")).T
-    neural_network.train(training_set_inputs1, training_set_outputs1, 10000)
+    # training_set_inputs12 = readInputCsv("training_data/2004-2005.csv", ";")
+    # training_set_outputs12 = array(readOutputCsv("training_data/2004-2005.csv", ";")).T
+    # neural_network.train(training_set_inputs12, training_set_outputs12, 10000)
+    #
+    # training_set_inputs11 = readInputCsv("training_data/2005-2006.csv", ";")
+    # training_set_outputs11 = array(readOutputCsv("training_data/2005-2006.csv", ";")).T
+    # neural_network.train(training_set_inputs11, training_set_outputs11, 10000)
 
-    training_set_inputs2 = readInputCsv("training_data/2014-2015.csv", ",")
-    training_set_outputs2 = array(readOutputCsv("training_data/2014-2015.csv", ",")).T
-    neural_network.train(training_set_inputs2, training_set_outputs2, 10000)
+    training_set_inputs10 = readInputCsv("training_data/2006-2007.csv", ";")
+    training_set_outputs10 = array(readOutputCsv("training_data/2006-2007.csv", ";")).T
+    neural_network.train(training_set_inputs10, training_set_outputs10, 10000)
 
-    training_set_inputs3 = readInputCsv("training_data/2013-2014.csv", ",")
-    training_set_outputs3 = array(readOutputCsv("training_data/2013-2014.csv", ",")).T
-    # neural_network.train(training_set_inputs3, training_set_outputs3, 10000)
-
-    training_set_inputs4 = readInputCsv("training_data/2012-2013.csv", ",")
-    training_set_outputs4 = array(readOutputCsv("training_data/2012-2013.csv", ",")).T
-    neural_network.train(training_set_inputs4, training_set_outputs4, 10000)
-
-    training_set_inputs5 = readInputCsv("training_data/2011-2012.csv", ",")
-    training_set_outputs5 = array(readOutputCsv("training_data/2011-2012.csv", ",")).T
-    neural_network.train(training_set_inputs5, training_set_outputs5, 10000)
-
-    training_set_inputs6 = readInputCsv("training_data/2010-2011.csv", ",")
-    training_set_outputs6 = array(readOutputCsv("training_data/2010-2011.csv", ",")).T
-    neural_network.train(training_set_inputs6, training_set_outputs6, 10000)
-
-    training_set_inputs7 = readInputCsv("training_data/2009-2010.csv", ",")
-    training_set_outputs7 = array(readOutputCsv("training_data/2009-2010.csv", ",")).T
-    neural_network.train(training_set_inputs7, training_set_outputs7, 10000)
+    training_set_inputs9 = readInputCsv("training_data/2007-2008.csv", ",")
+    training_set_outputs9 = array(readOutputCsv("training_data/2007-2008.csv", ",")).T
+    neural_network.train(training_set_inputs9, training_set_outputs9, 10000)
 
     training_set_inputs8 = readInputCsv("training_data/2008-2009.csv", ",")
     training_set_outputs8 = array(readOutputCsv("training_data/2008-2009.csv", ",")).T
     neural_network.train(training_set_inputs8, training_set_outputs8, 10000)
 
-    training_set_inputs9 = readInputCsv("training_data/2007-2008.csv", ",")
-    training_set_outputs9 = array(readOutputCsv("training_data/2007-2008.csv", ",")).T
-    neural_network.train(training_set_inputs9, training_set_outputs9, 10000)
+    training_set_inputs7 = readInputCsv("training_data/2009-2010.csv", ",")
+    training_set_outputs7 = array(readOutputCsv("training_data/2009-2010.csv", ",")).T
+    neural_network.train(training_set_inputs7, training_set_outputs7, 10000)
+
+    training_set_inputs6 = readInputCsv("training_data/2010-2011.csv", ",")
+    training_set_outputs6 = array(readOutputCsv("training_data/2010-2011.csv", ",")).T
+    neural_network.train(training_set_inputs6, training_set_outputs6, 10000)
+
+    training_set_inputs5 = readInputCsv("training_data/2011-2012.csv", ",")
+    training_set_outputs5 = array(readOutputCsv("training_data/2011-2012.csv", ",")).T
+    neural_network.train(training_set_inputs5, training_set_outputs5, 10000)
+
+    training_set_inputs4 = readInputCsv("training_data/2012-2013.csv", ",")
+    training_set_outputs4 = array(readOutputCsv("training_data/2012-2013.csv", ",")).T
+    neural_network.train(training_set_inputs4, training_set_outputs4, 10000)
+
+    training_set_inputs3 = readInputCsv("training_data/2013-2014.csv", ",")
+    training_set_outputs3 = array(readOutputCsv("training_data/2013-2014.csv", ",")).T
+    neural_network.train(training_set_inputs3, training_set_outputs3, 10000)
+
+    training_set_inputs2 = readInputCsv("training_data/2014-2015.csv", ",")
+    training_set_outputs2 = array(readOutputCsv("training_data/2014-2015.csv", ",")).T
+    neural_network.train(training_set_inputs2, training_set_outputs2, 10000)
+
+    training_set_inputs1 = readInputCsv("training_data/2015-2016.csv", ";")
+    training_set_outputs1 = array(readOutputCsv("training_data/2015-2016.csv", ";")).T
+    neural_network.train(training_set_inputs1, training_set_outputs1, 10000)
+
+    training_set_inputs = readInputCsv("training_data/2016-2017.csv", ";")
+    training_set_outputs = array(readOutputCsv("training_data/2016-2017.csv", ";")).T
+    neural_network.train(training_set_inputs, training_set_outputs, 10000)
+
 
     indexx = 0
     training_test = list()
